@@ -1,6 +1,7 @@
 import java.io.*;
 import java.net.*;
 import java.security.*;
+import java.security.spec.InvalidKeySpecException;
 import java.security.spec.InvalidParameterSpecException;
 
 import javax.crypto.*;
@@ -50,7 +51,7 @@ public class Client {
         System.out.println("Respuesta del servidor: " + response);
     }
 
-    private SecretKey simulateDiffieHellmanExchange() throws NoSuchAlgorithmException, InvalidKeyException, InvalidAlgorithmParameterException, InvalidParameterSpecException {
+    private SecretKey simulateDiffieHellmanExchange() throws NoSuchAlgorithmException, InvalidKeyException, InvalidAlgorithmParameterException, InvalidParameterSpecException, InvalidKeySpecException {
         return DiffieHellmanExchange.simulateDiffieHellmanExchange();
     }
 
